@@ -25,7 +25,7 @@ export const LeaderboardView: React.FC<LeaderboardViewProps> = ({ leaderboard })
         ) : (
           <div className="divide-y divide-gray-50">
             {leaderboard.map((entry, index) => {
-              const isTop3 = index < 3;
+
               const rankColor = index === 0 ? 'bg-yellow-100 text-yellow-700' : 
                                index === 1 ? 'bg-slate-100 text-slate-700' : 
                                index === 2 ? 'bg-amber-100 text-amber-800' : 'bg-gray-50 text-gray-500';

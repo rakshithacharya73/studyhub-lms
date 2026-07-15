@@ -38,7 +38,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({ currentUser 
       const q = query(collection(db, 'quizAttempts'), where('schoolCode', '==', currentUser.schoolCode));
       const attemptSnap = await getDocs(q);
       const fetchedAttempts: QuizAttempt[] = [];
-      attemptSnap.forEach((d) => fetchedAttempts.push({ id: d.id, ...d.data() } as QuizAttempt));
+      attemptSnap.forEach((d: any) => fetchedAttempts.push({ id: d.id, ...d.data() } as QuizAttempt));
       fetchedAttempts.sort((a, b) => (b.timestamp?.toMillis?.() || 0) - (a.timestamp?.toMillis?.() || 0));
       setAttempts(fetchedAttempts);
 
@@ -46,7 +46,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({ currentUser 
       const vq = query(collection(db, 'uploadedVideos'), where('schoolCode', '==', currentUser.schoolCode));
       const videoSnap = await getDocs(vq);
       const fetchedVideos: UploadedVideo[] = [];
-      videoSnap.forEach((d) => fetchedVideos.push({ id: d.id, ...d.data() } as UploadedVideo));
+      videoSnap.forEach((d: any) => fetchedVideos.push({ id: d.id, ...d.data() } as UploadedVideo));
       fetchedVideos.sort((a, b) => (b.timestamp?.toMillis?.() || 0) - (a.timestamp?.toMillis?.() || 0));
       setUploadedVideos(fetchedVideos);
 
@@ -54,7 +54,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({ currentUser 
       const nq = query(collection(db, 'uploadedNotes'), where('schoolCode', '==', currentUser.schoolCode));
       const noteSnap = await getDocs(nq);
       const fetchedNotes: UploadedNote[] = [];
-      noteSnap.forEach((d) => fetchedNotes.push({ id: d.id, ...d.data() } as UploadedNote));
+      noteSnap.forEach((d: any) => fetchedNotes.push({ id: d.id, ...d.data() } as UploadedNote));
       fetchedNotes.sort((a, b) => (b.timestamp?.toMillis?.() || 0) - (a.timestamp?.toMillis?.() || 0));
       setUploadedNotes(fetchedNotes);
 

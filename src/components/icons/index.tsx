@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 export const IconGraduationCap = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.42 10.922a2 2 0 0 1-.01 2.83l-7.1 7.1a2 2 0 0 1-2.82.01l-7.1-7.1a2 2 0 0 1 .01-2.83l7.1-7.1a2 2 0 0 1 2.82-.01l7.1 7.1Z"/><path d="M12 22v-4"/><path d="M12 2v4"/><path d="M22 12h-4"/><path d="M2 12h4"/></svg>;
 export const IconVideo = ({ className }: { className?: string }) => <svg className={className} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 8 6 4-6 4Z"/></svg>;
