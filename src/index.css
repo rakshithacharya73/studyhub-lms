@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-gradient-prastuti { background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%); }
+  .bg-gradient-anubhav { background: linear-gradient(135deg, #f97316 0%, #dc2626 100%); }
+  .bg-gradient-geomagic { background: linear-gradient(135deg, #06b6d4 0%, #2563eb 100%); }
+  .bg-gradient-science { background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%); }
+  .bg-gradient-maths { background: linear-gradient(135deg, #d946ef 0%, #e11d48 100%); }
+  .bg-gradient-class8-math { background: linear-gradient(135deg, #3b82f6 0%, #4f46e5 100%); }
+  .bg-gradient-class9-math { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+  .bg-gradient-class10-math { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+  .bg-gradient-class8-sci { background: linear-gradient(135deg, #d946ef 0%, #be185d 100%); }
+  .bg-gradient-class9-sci { background: linear-gradient(135deg, #d946ef 0%, #9f1239 100%); }
+  .bg-gradient-class10-sci { background: linear-gradient(135deg, #8b5cf6 0%, #4c1d95 100%); }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
