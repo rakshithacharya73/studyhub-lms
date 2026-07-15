@@ -49,7 +49,7 @@ export const VideoView: React.FC<VideoViewProps> = ({ classInfo, currentUser, on
         );
         const noteSnap = await getDocs(nq);
         const fetchedNotes: UploadedNote[] = [];
-        noteSnap.forEach((d) => fetchedNotes.push({ id: d.id, ...d.data() } as UploadedNote));
+        noteSnap.forEach((d: any) => fetchedNotes.push({ id: d.id, ...d.data() } as UploadedNote));
         setNotes(fetchedNotes);
 
       } catch (err) {

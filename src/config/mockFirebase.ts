@@ -5,7 +5,7 @@ export const auth = {};
 export const db = {};
 
 // Auth Mocks
-export const createUserWithEmailAndPassword = async (authObj: any, email: string, pass: string) => {
+export const createUserWithEmailAndPassword = async (_authObj: any, email: string, pass: string) => {
   const users = JSON.parse(localStorage.getItem('mock_firebase_auth_users') || '{}');
   const uid = 'user_' + Math.random().toString(36).substr(2, 9);
   if (Object.values(users).some((u: any) => u.email === email)) {
@@ -16,19 +16,19 @@ export const createUserWithEmailAndPassword = async (authObj: any, email: string
   return { user: { uid, email } };
 };
 
-export const signInWithEmailAndPassword = async (authObj: any, email: string, pass: string) => {
+export const signInWithEmailAndPassword = async (_authObj: any, email: string, pass: string) => {
   const users = JSON.parse(localStorage.getItem('mock_firebase_auth_users') || '{}');
   const user = Object.values(users).find((u: any) => u.email === email && u.pass === pass) as any;
   if (!user) throw new Error("Invalid email or password");
   return { user };
 };
 
-export const signOut = async (authObj: any) => {
+export const signOut = async (_authObj: any) => {
   return true;
 };
 
 // Firestore Mocks
-export const doc = (dbObj: any, collectionName: string, id: string) => {
+export const doc = (_dbObj: any, collectionName: string, id: string) => {
   return { collectionName, id };
 };
 
@@ -55,7 +55,7 @@ export const deleteDoc = async (docRef: any) => {
   }
 };
 
-export const collection = (dbObj: any, collectionName: string) => {
+export const collection = (_dbObj: any, collectionName: string) => {
   return { collectionName };
 };
 
@@ -138,7 +138,7 @@ export const saveFileToDB = async (id: string, file: File) => {
 };
 
 export const getFileFromDB = async (id: string): Promise<Blob | null> => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const request = indexedDB.open('VideoDB', 1);
     request.onupgradeneeded = (e: any) => {
       e.target.result.createObjectStore('videos');
